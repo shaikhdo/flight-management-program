@@ -1,0 +1,21 @@
+﻿<Window x:Class="AirlineManagementApplication.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirlineManagementApplication"
+        mc:Ignorable="d"
+        Title="HelpWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF88CD84" Offset="1"/>
+                <GradientStop Color="#FF344E32" Offset="0.444"/>
+                <GradientStop Color="#FF213220" Offset="0.941"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Label Content="This is an application to look at flight stuff." HorizontalAlignment="Left" Margin="108,0,0,0" VerticalAlignment="Center" Height="156" Width="655" FontSize="28"/>
+
+    </Grid>
+</Window>

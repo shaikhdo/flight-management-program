@@ -1,0 +1,82 @@
+﻿<Window x:Class="AirlineManagementApplication.AirlinesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirlineManagementApplication"
+        mc:Ignorable="d"
+        Title="AirlinesWindow" Height="450" Width="800" Background="#FFCBFFD1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="257*"/>
+            <RowDefinition Height="177*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="80*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Menu Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Top" Height="40" Background="#FF93BDF1">
+            <MenuItem x:Name="File" Header="File">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Save"/>
+                <MenuItem x:Name="menQuit" Header="Quit" Click="menQuit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem x:Name="menAdd" Header="Add Item" Click="menAdd_Click"/>
+                <MenuItem x:Name="menUpdate" Header="Update Item" Click="menUpdate_Click"/>
+                <MenuItem x:Name="menDelete" Header="Delete Item" Click="menDelete_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="menHelp" Header="Help" Click="menHelp_Click"/>
+        </Menu>
+
+        <StackPanel Margin="0,45,0,165" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <ListBox x:Name="listAirline" Height="152" Width="296" ItemsSource="{Binding}" SelectionChanged="listAirline_SelectionChanged">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Add" Click="menAdd_Click"/>
+                        <MenuItem Header="Update" Click="menUpdate_Click"/>
+                        <MenuItem Header="Delete" Click="menDelete_Click"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="0,257,0,0" Grid.RowSpan="2">
+            <Label Content="Airplanes:" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rb747" Content="Boeing 747" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rb787" Content="Boeing 787" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rb737" Content="Boeing 737" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rb727" Content="Boeing 727" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rb767" Content="Boeing 767" HorizontalAlignment="Center"/>
+
+
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="0,45,0,0">
+            <Label Content="Name:"/>
+            <TextBox x:Name="tbName"/>
+
+            <Label Content="Seats Available:"/>
+            <TextBox x:Name="tbSeats"/>
+
+
+            <Button x:Name="btnAdd" Content="Add New" Click="btnAdd_Click" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Background="#FFDD82F7" />
+            <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click" VerticalAlignment="Bottom" Background="#FF88C1F6"/>
+            <Button x:Name="btnDelete" Content="Delete" Click="btnDelete_Click" Width="401" Background="#FFFCAA58"/>
+
+        </StackPanel>
+        <StackPanel Margin="0,5,0,0" Grid.Row="1" Grid.ColumnSpan="2">
+            <Label Content="Meals Available:" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rbUnagi" Content="Unagi Roll" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rbWaldorf" Content="Waldorf Salad" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbMakhani" Content="Daal Makhani" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rbPaneer" Content="Shahi Paneer" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="rbKabsa" Content="Shrimp Kabsa" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Window>

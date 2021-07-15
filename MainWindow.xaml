@@ -1,0 +1,40 @@
+﻿<Window x:Name="Window" x:Class="AirlineManagementApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirlineManagementApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="474" Width="908">
+    <Grid Margin="0,0,-53,-41">
+        
+        <StackPanel Orientation="Horizontal" Margin="0,151,7,151">
+            <Button x:Name="btnCustomer" Content="Customers" Width="198" Background="#FF95E04B" Click="btnCustomer_Click"/>
+            <Button x:Name="btnFlight" Content="Flights" Width="199" RenderTransformOrigin="0.5,0.5" Click="btnFlight_Click" Background="#FF66F2F4">
+
+            </Button>
+            <Button x:Name="btnAirline" Content="Airlines" Width="194" Click="btnAirline_Click" Background="#FF95E04B"/>
+            <Button x:Name="btnPassenger" Content="Passengers" Width="208" Background="#FF66F2F4" Click="btnPassenger_Click"/>
+
+        </StackPanel>
+        <Menu Margin="0,0,0,411">
+            <MenuItem Header="File" Height="55" Width="215" HorizontalAlignment="Center" BorderBrush="#FF132976" Background="#FF66F2F4" VerticalAlignment="Center" Click="menQuit_Click">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Save"/>
+                <MenuItem Header="Quit" x:Name="menQuit"/>
+            </MenuItem>
+            <MenuItem Header="Edit" Height="51" Width="180" Background="#FF95E04B" BorderBrush="#FF132976"/>
+            <MenuItem x:Name="menHelp" Header="Help" Height="53" Width="221" Background="#FF66F2F4" BorderBrush="#FF132976" Click="menHelp_Click"/>
+
+            <MenuItem x:Name="menView" Width="239" Header="View" Background="#FF95E04B" BorderBrush="#FF132976">
+                <MenuItem x:Name="menCus" Header="Customers" Click="menCus_Click"/>
+                <MenuItem x:Name="menPass" Header="Passengers" Click="menPass_Click"/>
+                <MenuItem x:Name="menFlights" Header="Flights" Click="menFlights_Click"/>
+                <MenuItem x:Name="menAir" Header="Airlines" Click="menAir_Click"/>
+
+            </MenuItem>
+        </Menu>
+
+
+    </Grid>
+</Window>
